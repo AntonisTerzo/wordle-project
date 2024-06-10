@@ -4,7 +4,9 @@ const playerScore = mongoose.model('playerScore', {
     correctWord: String,
     wordLength: Number,
     includeDuplicates: Boolean,
-    startTime: Number,
-    endTime: Number,
+    guesses: Number,
+    duration: Number,
     playerName: String,
 });
+
+export { playerScore };

@@ -1,1 +1,28 @@
-<h1>HighScores</h1>
+<h1>Wordle HighScores</h1>
+ <h2>Test layout</h2>
+<div class='highScore__container'>
+  <h1 class='highScore__title'>High Scores</h1>
+
+  <table class='highScore__table'>
+    <thead>
+      <tr>
+        <th>Playername</th>
+        <th>Length</th>
+        <th>Duration</th>
+        <th>Duplicate Letters</th>
+        <th>Guesses</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each highScore}}
+        <tr>
+          <td data-label='Username'><strong>{{this.playerName}}</strong></td>
+          <td data-label='Word Length'>{{this.wordLength}}</td>
+          <td data-label='Time Taken'>{{this.duration}}s</td>
+          <td data-label='Unique Letters'>{{this.includeDuplicates}}</td>
+          <td data-label='Guesses'>{{this.guesses}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
