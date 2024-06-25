@@ -1,0 +1,24 @@
+<h1>Wordle HighScores</h1>
+ <h2>Expiriment Layout</h2>
+<div class='highScore__container'>
+  <h1 class='highScore__title'>High Scores</h1>
+
+  <table class='highScore__table'>
+    <thead>
+      <tr>
+        <th>Playername</th> 
+        <th>Duration</th>
+        <th>Guesses</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each highScore}}
+        <tr>
+          <td data-label='Playername'><strong>{{this.playerName}}</strong></td>
+          <td data-label='Duration'>{{this.duration}}s</td>
+          <td data-label='Guesses'>{{this.guesses}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
