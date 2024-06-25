@@ -7,7 +7,6 @@ import { v4 as uuidv4 } from 'uuid';
 
 const apiRouter = express.Router();
 let gameSessions = [];
-console.log(gameSessions);
 
 apiRouter.post('/new_game', async (req, res) => {
   const gameSettings = req.body;
@@ -30,7 +29,6 @@ apiRouter.post('/new_game', async (req, res) => {
     gameSessions.push(gameSession);
     res.status(200).json(gameSession.gameId);
   }
-  console.log(gameSessions);
 });
 
 apiRouter.post('/:id/guesses', async (req, res) => {
@@ -57,13 +55,12 @@ apiRouter.post('/:id/guesses', async (req, res) => {
         includeDuplicates:
           new Set(gameSession.chosenWord).size === gameSession.chosenWord.length
             ? false
-            : true
+            : true,
       });
       res.send([guessResult, gameSession]);
     } else {
       res.send([guessResult]);
     }
-    console.log(gameSessions);
   }
 });
 
@@ -89,7 +86,6 @@ apiRouter.post('/:id/highscores', async (req, res) => {
       (gameSession) => gameSession.gameId !== gameId
     );
     res.status(200).send('The score is saved successfully!');
-    console.log(playerResultModel);
   }
 });
 
