@@ -396,6 +396,18 @@ body {
   }
 }
 
+.superMario {
+  font-family: $standard-font;
+  font-size: small;
+  font-weight: bold;
+  position: absolute; left: 0; bottom: 0;
+  
+
+  &__img {
+    height: 2rem;
+  }
+}
+
 .error {
   background-color: #f2f1ee;
   border: solid 2px #ff5d5d;
