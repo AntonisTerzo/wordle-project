@@ -1,0 +1,92 @@
+$xs: 360px;
+$small: 550px;
+$medium: 960px;
+$large: 1080px;
+$xl: 1200px;
+$xxl: 1650px;
+$spec: 1260px;
+$color-white: rgb(244, 244, 244);
+$standard-font: 'Press Start 2P', cursive;
+
+@mixin breakpoint($point) {
+  @media screen and (min-width: $point) {
+    @content;
+  }
+}
+
+@mixin breakpointMax($point) {
+  @media screen and (max-width: $point) {
+    @content;
+  }
+}
+
+html {
+  font-family: $standard-font;
+  font-size: 12px;
+  min-height: 100%;
+
+  @include breakpoint(($xs)) {
+    font-size: 14px;
+  }
+
+  @include breakpoint(($small)) {
+    font-size: 16px;
+  }
+
+  @include breakpoint(($medium)) {
+    font-size: 24px;
+  }
+}
+
+header {
+    display: flex;
+    justify-content: center;
+  }
+
+.navbar {
+  margin-bottom: 2rem;
+
+
+  &__home {
+    color: black;
+  }
+
+  &__highscore {
+    position: relative;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    color: black
+  }
+
+  &__about {
+    color: black;
+  }
+}
+
+.highscore__title {
+    display: flex;
+    justify-content: center;
+}
+
+.highscore__container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.playerName {
+    margin-left: 1rem;
+}
+
+.superMario {
+  font-family: $standard-font;
+  font-size: medium;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  &__img {
+    height: 3rem;
+  }
+}
