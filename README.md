@@ -1,4 +1,5 @@
-Wordle Project
+#Wordle Project
+##Usage
 git clone repo
 cd frontend
 npm run build
