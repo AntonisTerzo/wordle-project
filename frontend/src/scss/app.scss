@@ -166,6 +166,10 @@ body {
   flex-direction: column;
   justify-content: center;
 
+  &__start {
+    width: 10rem;
+  }
+
   &__info {
     color: $color-white;
     font-size: 1.2rem;
@@ -247,17 +251,16 @@ body {
 
 .result {
   align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  display: inline-block;
+  // flex-direction: column;
+  // gap: 5rem;
   justify-content: center;
   margin: 0.5rem 0 1rem 0;
 
   &__word {
-    display: flex;
-    gap: 0.5rem;
+    display: inline-block;
     list-style: none;
-    margin: 0;
+    margin: 0.5rem;
     padding: 0;
   }
 
@@ -296,7 +299,7 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0.6rem 0;
-  width: 11rem;
+
 
   &:active {
     background-color: rgba(211, 211, 211, 0.123);

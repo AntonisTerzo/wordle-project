@@ -16,6 +16,7 @@ function App() {
   const [gameId, setGameId] = useState();
   const [posted, setPosted] = useState(false);
   const timerId = useRef(null);
+  const [guessCount, setGuessCount] = useState(0);
 
   useEffect(() => {
     if (errorMessage) {
@@ -78,6 +79,12 @@ function App() {
     } else {
       const data = await response.json();
       handleError(data);
+    }
+    
+    setGuessCount(guessCount + 1);
+
+    if (guessCount >= 6) {
+      console.log("Game over!")
     }
   }
 
