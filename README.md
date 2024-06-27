@@ -1,16 +1,16 @@
 # Wordle Project
 
-## Usage:
+## **text** Usage:
 
 git clone repo
 
-### On frontend:
+### **text** On frontend:
 
 cd frontend
 
 npm run build
 
-#### On backend:
+#### **text** On backend:
 
 cd backend
 
