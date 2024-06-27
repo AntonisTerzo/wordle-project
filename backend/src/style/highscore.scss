@@ -1,0 +1,132 @@
+$xs: 360px;
+$small: 550px;
+$medium: 960px;
+$large: 1080px;
+$xl: 1200px;
+$xxl: 1650px;
+$spec: 1260px;
+$background-color: #87CEEB;
+$table-background: #000;
+$table-border: #FFF;
+$header-color: #FFD700;
+$standard-font: 'Press Start 2P', cursive;
+$cell-padding: 10px;
+
+@mixin breakpoint($point) {
+  @media screen and (min-width: $point) {
+    @content;
+  }
+}
+
+@mixin breakpointMax($point) {
+  @media screen and (max-width: $point) {
+    @content;
+  }
+}
+
+html {
+//   font-family: $standard-font;
+//   font-size: 12px;
+//   min-height: 100%;
+
+  @include breakpoint(($xs)) {
+    font-size: 14px;
+  }
+
+  @include breakpoint(($small)) {
+    font-size: 16px;
+  }
+
+  @include breakpoint(($medium)) {
+    font-size: 24px;
+  }
+}
+
+body {
+    font-family: $standard-font;
+    background-color: $background-color;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    height: auto;
+  }
+
+header {
+    display: flex;
+    justify-content: center;
+  }
+
+.navbar {
+  margin-bottom: 1rem;
+
+
+  &__home {
+    color: black;
+  }
+
+  &__highscore {
+    position: relative;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    color: black
+  }
+
+  &__about {
+    color: black;
+  }
+}
+
+.highscore__title {
+    display: flex;
+    justify-content: center;
+}
+
+.highscore__container {
+    background-color: $table-background;
+    border: 4px solid $table-border;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+.superMario {
+  font-family: $standard-font;
+  font-size: small;
+  font-weight: bold;
+  position: relative;
+  left: 0;
+  bottom: 0;
+
+  &__img {
+    height: 3rem;
+  }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      border: 2px solid $table-border;
+      padding: $cell-padding;
+      color: #FFF;
+    }
+
+    th {
+      background-color: darken($header-color, 20%);
+    }
+
+    td {
+      background-color: lighten($table-background, 10%);
+    }
+
+    tr:nth-child(even) {
+      td {
+        background-color: lighten($table-background, 20%);
+      }
+    }
+  }
