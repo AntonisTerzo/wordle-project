@@ -6,7 +6,7 @@ $xl: 1200px;
 $xxl: 1650px;
 $spec: 1260px;
 $color-white: rgb(244, 244, 244);
-$standard-font: "Courier New", Courier, monospace;
+$standard-font: 'Press Start 2P', cursive;
 
 @mixin breakpoint($point) {
   @media screen and (min-width: $point) {
@@ -52,7 +52,7 @@ body {
 }
 
 .navbar {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   &__home {
     color: #f9f9f9;

@@ -5,8 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node .",
     "dev": "nodemon .",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "sass-build": "sass --no-source-map src/style/main.scss static/main.css",
+    "sass:watch": "sass --no-source-map --watch src/style/main.scss static/main.css"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +18,7 @@
     "jest": "^29.7.0",
     "node-fetch": "^3.3.2",
     "nodemon": "^3.1.0",
-    "tailwindcss": "^3.4.4"
+    "sass": "^1.77.6"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
