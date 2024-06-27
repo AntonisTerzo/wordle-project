@@ -27,4 +27,5 @@ app.get('/highscore', async (req, res) => {
 app.use('/api', apiRouter);
 
 app.use(express.static('../frontend/dist'))
+app.use('/static', express.static('./static'));
 export default app;
