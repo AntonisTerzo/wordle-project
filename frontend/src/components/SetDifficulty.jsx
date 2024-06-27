@@ -52,6 +52,9 @@ export default function SetDifficulty({ onStartGame, error }) {
         <button className='difficulty__start gameButton' type='submit'>
           START
         </button>
+        <p>
+          You will have 6 tries to win the game. Good luck!
+        </p>
       </form>
     </>
   );

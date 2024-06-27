@@ -5,6 +5,7 @@ import SendScore from './components/SendScore';
 import './scss/app.scss';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Gameover from './components/Gameover';
 
 function App() {
   const [results, setResults] = useState([]);
@@ -17,6 +18,7 @@ function App() {
   const [posted, setPosted] = useState(false);
   const timerId = useRef(null);
   const [guessCount, setGuessCount] = useState(0);
+  const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
     if (errorMessage) {
@@ -49,7 +51,7 @@ function App() {
   }
 
   async function handleGuess(newGuess) {
-    if (!newGuess) {
+    if (!newGuess || gameOver) {
       return;
     }
 
@@ -80,11 +82,11 @@ function App() {
       const data = await response.json();
       handleError(data);
     }
-    
+
     setGuessCount(guessCount + 1);
 
-    if (guessCount >= 6) {
-      console.log("Game over!")
+    if (guessCount >= 6 && !win) {
+      setGameOver(true);
     }
   }
 
@@ -110,6 +112,7 @@ function App() {
     setScore();
     setGameId();
     setPosted(false);
+    setGameOver(false);
   }
 
   function handleError(message) {
@@ -131,7 +134,7 @@ function App() {
               errorMessage={errorMessage}
             />
           )}
-          {!startGame}
+
           <h2 className='wordleGame__title'>
             {!startGame ? 'Game Settings' : 'Guess the word!'}
           </h2>
@@ -148,6 +151,7 @@ function App() {
               error={handleError}
             />
           )}
+          {gameOver && <Gameover abort={handleAbort} />}
           {errorMessage && <p className='error'>{errorMessage}</p>}
         </div>
       </div>
