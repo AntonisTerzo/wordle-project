@@ -1,3 +1,7 @@
+html {
+  font-size: 12px;
+  min-height: 100%;
+}
 @media screen and (min-width: 360px) {
   html {
     font-size: 14px;
@@ -17,7 +21,11 @@
 body {
   font-family: "Press Start 2P", cursive;
   background-color: #87CEEB;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   height: auto;
+  overflow: hidden;
 }
 
 header {
@@ -26,19 +34,22 @@ header {
 }
 
 .navbar {
+  display: flex;
   margin-bottom: 1rem;
 }
 .navbar__home {
-  color: black;
+  position: relative;
+  color: #f9f9f9;
 }
 .navbar__highscore {
   position: relative;
   margin-right: 2rem;
   margin-left: 2rem;
-  color: black;
+  color: #f9f9f9;
 }
 .navbar__about {
-  color: black;
+  position: relative;
+  color: #f9f9f9;
 }
 
 .highscore__title {
@@ -55,18 +66,6 @@ header {
   max-width: 600px;
   text-align: center;
   margin: auto;
-}
-
-.superMario {
-  font-family: "Press Start 2P", cursive;
-  font-size: small;
-  font-weight: bold;
-  position: relative;
-  left: 0;
-  bottom: 0;
-}
-.superMario__img {
-  height: 3rem;
 }
 
 table {
@@ -86,4 +85,24 @@ table td {
 }
 table tr:nth-child(even) td {
   background-color: #333333;
+}
+
+h1 {
+  text-align: center;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.superMario {
+  font-family: "Press Start 2P", cursive;
+  font-size: small;
+  font-weight: bold;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+.superMario__img {
+  height: 3rem;
 }

@@ -1,0 +1,16 @@
+.footer {
+    margin-top: auto;
+}
+.superMario {
+    font-family: $standard-font;
+    font-size: small;
+    font-weight: bold;
+    position: relative;
+    left: 0;
+    bottom: 0;
+  
+    &__img {
+      height: 3rem;
+    }
+  }
+  

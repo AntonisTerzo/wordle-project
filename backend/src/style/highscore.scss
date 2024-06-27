@@ -25,9 +25,8 @@ $cell-padding: 10px;
 }
 
 html {
-//   font-family: $standard-font;
-//   font-size: 12px;
-//   min-height: 100%;
+  font-size: 12px;
+  min-height: 100%;
 
   @include breakpoint(($xs)) {
     font-size: 14px;
@@ -45,11 +44,11 @@ html {
 body {
     font-family: $standard-font;
     background-color: $background-color;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     height: auto;
+    overflow: hidden;
   }
 
 header {
@@ -58,22 +57,27 @@ header {
   }
 
 .navbar {
+  display: flex;
   margin-bottom: 1rem;
 
 
   &__home {
-    color: black;
+    position: relative;
+    color: #f9f9f9;
+    // right: -1rem;
   }
 
   &__highscore {
     position: relative;
     margin-right: 2rem;
     margin-left: 2rem;
-    color: black
+    color: #f9f9f9;
   }
 
   &__about {
-    color: black;
+    position: relative;
+    color: #f9f9f9;
+    // left: -1rem;
   }
 }
 
@@ -93,18 +97,6 @@ header {
     margin: auto;
 }
 
-.superMario {
-  font-family: $standard-font;
-  font-size: small;
-  font-weight: bold;
-  position: relative;
-  left: 0;
-  bottom: 0;
-
-  &__img {
-    height: 3rem;
-  }
-}
 
 table {
     width: 100%;
