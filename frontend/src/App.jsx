@@ -4,6 +4,7 @@ import SetDifficulty from './components/SetDifficulty';
 import SendScore from './components/SendScore';
 import './scss/app.scss';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   const [results, setResults] = useState([]);
@@ -142,11 +143,8 @@ function App() {
           )}
           {errorMessage && <p className='error'>{errorMessage}</p>}
         </div>
-        <p className='superMario'>
-          Theme Inspired by Super Mario{' '}
-          <img className='superMario__img' src='/superMario.png' />
-        </p>
       </div>
+      <Footer />
     </>
   );
 }

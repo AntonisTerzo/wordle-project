@@ -39,22 +39,31 @@ html {
 }
 
 body {
-  background: linear-gradient(0.25turn, #049CD8, #43B047, #FBD000, #E52521);
+  background: linear-gradient(0.25turn, #049cd8, #43b047, #fbd000, #e52521);
   background-repeat: no-repeat;
   display: grid;
   grid-row: 2 / span 1;
   grid-template-columns: auto;
   grid-template-rows: 1fr;
+  min-height: 100vh;
 }
 
 #root {
   display: grid;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  margin-left: 0.7rem;
+}
+
 .navbar {
   margin-bottom: 1rem;
+  display: flex;
 
   &__home {
+    position: relative;
     color: #f9f9f9;
   }
 
@@ -62,10 +71,11 @@ body {
     position: relative;
     margin-right: 2rem;
     margin-left: 2rem;
-    color:#f9f9f9
+    color: #f9f9f9;
   }
 
   &__about {
+    position: relative;
     color: #f9f9f9;
   }
 }
@@ -82,7 +92,7 @@ body {
     position: relative;
     align-items: center;
     background-color: rgba(7, 1, 1, 0.178);
-    border: solid 5px ;
+    border: solid 5px;
     border-radius: 6px;
     box-shadow: 0px 0px 4px rgba(191, 19, 19, 0.817);
     display: flex;
@@ -168,8 +178,8 @@ body {
     font-family: $standard-font;
     font-weight: bold;
     height: 1.5rem;
-    margin: 0;
-    padding: 0;
+    margin: 0.5rem;
+    padding: 10rem;
     padding-block: 0;
     padding-inline: 0;
     text-align: center;
@@ -180,7 +190,7 @@ body {
     }
   }
 
-  &__setDuplicates[type="checkbox"] {
+  &__setDuplicates[type='checkbox'] {
     cursor: pointer;
     height: 1.5rem;
     line-height: normal;
@@ -277,12 +287,12 @@ body {
 }
 
 .gameButton {
-  background-color: #E52521;
+  background-color: #e52521;
   border: solid 2px rgb(201, 200, 200);
   border-radius: 6px;
   color: $color-white;
   cursor: pointer;
-  font-family: "Courier New", Courier, monospace;
+  font-family: $standard-font;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0.6rem 0;
@@ -349,7 +359,7 @@ body {
       margin-right: 0.5rem;
       padding: 0.5rem 0;
       text-align: center;
-      width: 11rem;
+      width: auto;
 
       &:focus {
         outline: none;
@@ -362,12 +372,10 @@ body {
       border-radius: 6px;
       color: $color-white;
       cursor: pointer;
-      font-family: "Courier New", Courier, monospace;
+      font-family: $standard-font;
       font-size: 0.9rem;
       font-weight: bold;
       max-width: 11rem;
-
-
 
       &:active {
         background-color: rgba(211, 211, 211, 0.123);
@@ -396,15 +404,20 @@ body {
   }
 }
 
+.footer {
+  margin-top: auto;
+}
+
 .superMario {
   font-family: $standard-font;
   font-size: small;
   font-weight: bold;
-  position: absolute; left: 0; bottom: 0;
-  
+  position: relative;
+  left: 0;
+  bottom: 0;
 
   &__img {
-    height: 2rem;
+    height: 3rem;
   }
 }
 
