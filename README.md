@@ -1,17 +1,21 @@
-# **text**Wordle Project
+# **Wordle Project**
 
-## **text**Usage:
+## **Usage:**
 
 git clone repo
 
-### **text**On frontend:
+### **On frontend:**
 
 cd frontend
 
 npm run build
 
-#### **text**On backend:
+#### **On backend:**
 
 cd backend
 
 npm start
+
+#####
+
+*Then hopefully you will enjoy this Super Mario themed Wordle game*
