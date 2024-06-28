@@ -13,8 +13,8 @@ export default function SetDifficulty({ onStartGame, error }) {
         className='difficulty'
         onSubmit={(e) => {
           e.preventDefault();
-          if (length < 3 || length > 8) {
-            error('Choose a length between 3 and 8');
+          if (length < 4 || length > 8) {
+            error('Choose a length between 4 and 8');
             return;
           }
           const difficulty = {
@@ -25,7 +25,7 @@ export default function SetDifficulty({ onStartGame, error }) {
         }}
       >
         <label className='difficulty__info'>
-          Choose the length of the word between 3 and 8:
+          Choose the length of the word between 4 and 8:
         </label>
         <input
           className='difficulty__setLength'
@@ -40,7 +40,7 @@ export default function SetDifficulty({ onStartGame, error }) {
         ></input>
         <hr className='wordleGame__line' />
         <label className='difficulty__info'>
-          Set if duplicate letters should exist:
+          Choose if duplicate letters should exist:
         </label>
         <input
           className='difficulty__setDuplicates'
@@ -53,7 +53,7 @@ export default function SetDifficulty({ onStartGame, error }) {
           START
         </button>
         <p>
-          You will have 6 tries to win the game. Good luck!
+          You will now have 6 tries to win the game. Good luck!
         </p>
       </form>
     </>

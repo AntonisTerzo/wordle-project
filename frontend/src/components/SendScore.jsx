@@ -14,14 +14,26 @@ export default function SendScore({
     <div className='sendScore__wrapper'>
       {posted && (
         <>
-          <h2 className='sendScore__title'>Score posted!</h2>
+          <h2 className='sendScore__postTitle'>Score posted!</h2>
+          <p className='sendScore__postp'>
+            Now you can check
+            <br />
+            the highscore list on
+            <br />
+            the highscore page
+            <br />
+            or start a new game.
+          </p>
+          <a className='sendScore__highscore' href='highscore'>
+            Highscore List
+          </a>
         </>
       )}
       {!posted && (
         <>
-          <h2 className='sendScore__title'>You did it!</h2>
+          <h2 className='sendScore__title'>Awesome win!</h2>
           <h2 className='sendScore__title--small'>
-            Post you'r score and/or start a new game
+            Post your score and/or start a new game
           </h2>
           <hr className='wordleGame__line' />
           <ul className='sendScore__score'>

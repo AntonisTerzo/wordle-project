@@ -17,7 +17,6 @@ function App() {
   const [gameId, setGameId] = useState();
   const [posted, setPosted] = useState(false);
   const timerId = useRef(null);
-  const [guessCount, setGuessCount] = useState(0);
   const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
@@ -30,6 +29,12 @@ function App() {
       clearTimeout(timerId.current);
     };
   }, [errorMessage]);
+
+  useEffect(() => {
+    if (results.length >= 6 && !win) {
+      setGameOver(true);
+    }
+  }, [results, win]);
 
   async function handleStartGame(chosenDifficulty) {
     const response = await fetch('/api/new_game', {
@@ -76,17 +81,11 @@ function App() {
 
       if (data[1]) {
         setScore(data[1]);
-        setWin(!win);
+        setWin(true);
       }
     } else {
       const data = await response.json();
       handleError(data);
-    }
-
-    setGuessCount(guessCount + 1);
-
-    if (guessCount >= 6 && !win) {
-      setGameOver(true);
     }
   }
 
