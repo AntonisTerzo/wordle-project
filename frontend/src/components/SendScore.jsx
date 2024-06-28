@@ -15,14 +15,12 @@ export default function SendScore({
       {posted && (
         <>
           <h2 className='sendScore__postTitle'>Score posted!</h2>
-          <p className='sendScore__postp'>
+          <p className='sendScore__postPara'>
             Now you can check
+            
+            the highscore list and/or
             <br />
-            the highscore list on
-            <br />
-            the highscore page
-            <br />
-            or start a new game.
+             start a new game.
           </p>
           <a className='sendScore__highscore' href='highscore'>
             Highscore List
@@ -31,7 +29,10 @@ export default function SendScore({
       )}
       {!posted && (
         <>
-          <h2 className='sendScore__title'>Awesome win!</h2>
+        <img className='sendScore__img' src='trophy.png'></img>
+          <h2 className='sendScore__title'>
+          Congratulations!You're a Wordle champ!
+          </h2>
           <h2 className='sendScore__title--small'>
             Post your score and/or start a new game
           </h2>

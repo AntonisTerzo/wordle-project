@@ -49,12 +49,11 @@ export default function SetDifficulty({ onStartGame, error }) {
           value={isChecked}
           onChange={checkHandler}
         ></input>
+        <hr className='wordleGame__line' />
+        <label className='difficulty__info'>You will now have 6 tries to win the game. Good luck!</label>
         <button className='difficulty__start gameButton' type='submit'>
           START
         </button>
-        <p>
-          You will now have 6 tries to win the game. Good luck!
-        </p>
       </form>
     </>
   );
