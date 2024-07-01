@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const playerScore = mongoose.model('playerScore', {
+const playerScoreSchema = new mongoose.Schema({
     gameId: String,
     chosenWord: String,
     startTime: Number,
@@ -10,5 +10,7 @@ const playerScore = mongoose.model('playerScore', {
     playerName: String,
     duration: Number,
 });
+
+const playerScore = mongoose.model('playerScore', playerScoreSchema)
 
 export { playerScore };
