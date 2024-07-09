@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import trophyImg from '../../public/trophy.png';
 
 export default function SendScore({
   onPostScore,
@@ -29,7 +30,7 @@ export default function SendScore({
       )}
       {!posted && (
         <>
-        <img className='sendScore__img' src='trophy.png'></img>
+        <img className='sendScore__img' alt='a trophy image' src={trophyImg}> </img>
           <h2 className='sendScore__title'>
           Congratulations!You're a Wordle champ!
           </h2>
