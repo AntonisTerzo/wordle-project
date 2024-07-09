@@ -24,4 +24,4 @@ npm start (keep in mind to "npm start" on the backend folder)
 
 *Then hopefully you will enjoy this Super Mario themed Wordle game*
 
-#### PS. Im currently learning how to use docker to run the db, so right now you have to create your own MongoDb instance to run the game.
+#### *PS. You have to create your own MongoDb instance to run the game.*
