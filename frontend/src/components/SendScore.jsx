@@ -30,7 +30,7 @@ export default function SendScore({
       )}
       {!posted && (
         <>
-        <img className='sendScore__img' alt='a trophy image' src={trophyImg}> </img>
+        <img className='sendScore__img' alt='a trophy image' src={trophyImg} />
           <h2 className='sendScore__title'>
           Congratulations!You're a Wordle champ!
           </h2>
